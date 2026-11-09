@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adam's Playables</title>
+<style>
+:root{--bg:#141428;--card:#22223d;--fg:#f2f2f7;--muted:#a9a9c4;--accent:#7de8c8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,sans-serif;padding:32px 16px}
+main{max-width:720px;margin:0 auto}
+h1{margin:0 0 4px;font-size:2rem}
+p.lead{color:var(--muted);margin:0 0 28px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+a.card{display:block;background:var(--card);border-radius:14px;padding:20px;color:inherit;text-decoration:none;border:1px solid transparent}
+a.card:hover,a.card:focus{border-color:var(--accent)}
+.card h2{margin:0 0 6px;font-size:1.3rem}
+.card p{margin:0 0 14px;color:var(--muted)}
+.play{color:var(--accent);font-weight:600}
+footer{margin-top:32px;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<main>
+<h1>Playables</h1>
+<p class="lead">Small one-tap HTML5 games built for YouTube Playables. Early prototypes: play on a phone or a computer.</p>
+<div class="grid">
+<a class="card" href="orbit-hop/"><h2>Orbit Hop</h2><p>Circle a planet as a comet and let go at the right moment to reach the next one's ring. The rings shrink as you climb.</p><span class="play">Play &rarr;</span></a>
+<a class="card" href="sway-stack/"><h2>Sway Stack</h2><p>Drop sliding crates on a tower that sways like a spring. Land them in the middle to steady it before it topples.</p><span class="play">Play &rarr;</span></a>
+</div>
+<footer>Tap or click to play.</footer>
+</main>
+</body>
+</html>

@@ -16,8 +16,9 @@
   // Test aids, by query string (this file is the demo's host, not part of any game):
   //   ?stats=1   a small readout of the game's own render stats (window.__pfRender), for phone tests
   //   ?stage=N   lava-obby only: start at stage N (the next save the game makes replaces your progress)
+  function safeDecode(s) { try { return decodeURIComponent(s); } catch (e) { return s; } }
   var query = {};
-  location.search.replace(/^\?/, '').split('&').forEach(function (kv) { var p = kv.split('='); if (p[0]) query[p[0]] = p[1] === undefined ? '1' : decodeURIComponent(p[1]); });
+  location.search.replace(/^\?/, '').split('&').forEach(function (kv) { var p = kv.split('='); if (p[0]) query[p[0]] = p[1] === undefined ? '1' : safeDecode(p[1]); });
   function startAt(saved) {
     var n = Math.round(Number(query.stage));
     if (!(n >= 1) || location.pathname.indexOf('/lava-obby/') < 0) return saved;

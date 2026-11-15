@@ -7455,8 +7455,8 @@ uniform float uFlutter;`).replace(`#include <begin_vertex>`,`#include <begin_ver
         col = mix(col, uSun, smoothstep(0.9972, 0.9984, s));
         col += uSun * pow(s, 22.0) * 0.4;
         if (uStars > 0.5) {
-          vec2 g = d.xz / (abs(d.y) + 0.6) * 60.0;
-          float st = step(0.985, hash(floor(g))) * smoothstep(0.02, 0.35, up);
+          vec2 g = d.xz / (abs(d.y) + 0.6) * 230.0;
+          float st = step(0.99, hash(floor(g))) * smoothstep(0.3, 0.06, length(fract(g) - 0.5)) * smoothstep(0.02, 0.35, up);
           col += vec3(st) * (0.5 + 0.5 * hash(floor(g) + 7.0));
         }
         col += vec3(uFlash) * 0.5;
